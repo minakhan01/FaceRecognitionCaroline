@@ -3,6 +3,7 @@ import face_recognition_api
 import pickle
 import numpy as np
 import pandas as pd
+import time
 
 
 def get_prediction_images(prediction_dir):
@@ -35,7 +36,10 @@ if os.path.isfile(fname):
 else:
     print('\x1b[0;37;43m' + "Classifier '{}' does not exist".format(fname) + '\x1b[0m')
     quit()
+
 curr = time.time()
+
+
 for image_path in get_prediction_images(prediction_dir):
     # print colorful text with image name
     print('\x1b[6;30;42m' + "=====Predicting faces in '{}'=====".format(image_path) + '\x1b[0m')
@@ -58,66 +62,7 @@ for image_path in get_prediction_images(prediction_dir):
         # predictions = clf.predict(face_encoding).ravel()
         # person = le.inverse_transform(int(predictions[0]))
         # print("Predict {}.".format(person))
+    print()
+
 print("Predicted in " + str(time.time() - curr) + " seconds.")
 
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-D
-D
-C
-    print()
